@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Emotion Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading">Facial Emotion Detector</h1>
+        <div class="video-container">
+            <video id="video" width="640" height="480" autoplay></video>
+            <canvas id="canvas" width="640" height="480"></canvas> <!-- EXACT SAME DIMENSIONS AS VIDEO FOR PROPER OVERLAP -->
+        </div>
+        <div>
+            <button id="startButton">Start Webcam</button>
+            <button id="stopButton">Stop Webcam</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
